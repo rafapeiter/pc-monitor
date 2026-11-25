@@ -1,0 +1,4 @@
+interface:
+  display_name: "PC Monitor"
+  short_description: "Consultar métricas e falhas deste computador"
+  default_prompt: "Use $pc-monitor para verificar métricas e eventos recentes do meu computador."

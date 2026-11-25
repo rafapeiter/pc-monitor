@@ -1,0 +1,34 @@
+# Artefatos gerados pela compilação
+/PCMonitor.exe
+/PCMonitor.Core.dll
+/PCMonitor.Mcp.exe
+/Dashboard.xaml
+/integration/pc-monitor-plugin/server/
+/bin/
+/obj/
+
+# Dados locais, diagnósticos e arquivos pessoais
+/logs/
+/exports/
+/test-results/
+/settings.json
+/system.json
+/status.json
+/metrics.json
+*.jsonl
+*.log
+*.zip
+.env
+.env.*
+!.env.example
+*.pfx
+*.p12
+*.pem
+*.key
+
+# Ferramentas locais
+.vs/
+.vscode/
+.idea/
+Thumbs.db
+Desktop.ini

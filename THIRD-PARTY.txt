@@ -1,0 +1,10 @@
+PC MONITOR 2.0.0 — DEPENDÊNCIAS
+
+ModernWpfUI 0.9.6 (Yimeng Wu), licença MIT.
+Origem: https://api.nuget.org/v3-flatcontainer/modernwpfui/0.9.6/modernwpfui.0.9.6.nupkg
+SHA256 do pacote: 776b93df90c50547f82035fa7259b3b7162b9a9712b2485b30d16bf53686cb1d
+Usados os binários net462 e recursos pt-BR. Não foram modificados.
+Licença: MODERNWPF-LICENSE.txt
+Repositório: https://github.com/Kinnara/ModernWpf
+Runtime: .NET Framework 4.8 e componentes WPF já presentes no Windows deste PC.
+Não é preciso instalar Python, Node ou um SDK para executar os programas.

@@ -1,0 +1,13 @@
+{
+  "mcp_server": "pc_monitor",
+  "executable": "%LOCALAPPDATA%/Programs/PCMonitor/2.0.2/PCMonitor.Mcp.exe",
+  "data_root": "%LOCALAPPDATA%/PCMonitor",
+  "read_only_cli_example": [
+    "--data-dir",
+    "%LOCALAPPDATA%/PCMonitor",
+    "--query",
+    "get_status"
+  ],
+  "path_note": "Substitua %LOCALAPPDATA% pelo caminho absoluto desta conta antes de configurar o cliente MCP. Para executar sem instalar, use o PCMonitor.Mcp.exe gerado na raiz do repositório.",
+  "reload_note": "O cliente pode precisar ser reaberto para carregar a configuração MCP e a skill."
+}

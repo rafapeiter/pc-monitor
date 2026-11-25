@@ -1,0 +1,168 @@
+PC MONITOR — AJUDA E FUNCIONAMENTO
+F1 ou botão Ajuda abre este conteúdo no programa.
+
+COMECE POR AQUI
+
+Para que serve
+O PC Monitor acompanha o uso dos recursos do computador e guarda um histórico local para investigar lentidão, travamentos e erros. Ele registra sinais do problema; não impede travamentos nem corrige o Windows automaticamente.
+
+Onde encontrar cada informação
+Visão geral mostra métricas e o gráfico recente. Alertas e marcadores reúne avisos e horários registrados por você. Eventos do Windows exibe erros e avisos coletados; selecione uma linha para ler a descrição. Conexão com IA informa o estado da comunicação local. Preferências controla aparência, início com Windows e registros.
+
+Janela e bandeja
+Fechar ou minimizar a janela mantém a coleta na bandeja, perto do relógio do Windows. Dê dois cliques no ícone para abrir o painel ou use o menu do botão direito. Para encerrar a coleta e o programa, escolha Sair do PC Monitor nesse menu. Iniciar com o Windows abre o monitor recolhido ao entrar na sua conta.
+
+ENTENDA AS MÉTRICAS
+
+Processador (CPU)
+Mostra o uso total dos processadores lógicos, de 0 a 100%. Um núcleo pode estar ocupado mesmo com a média total baixa. A leitura não mede FPS ou desempenho de um jogo diretamente.
+
+Memória RAM
+Mostra a parcela da memória física em uso e os valores usados/total. Uso alto pode causar pressão de memória, mas o percentual isolado não comprova defeito na RAM.
+
+Placa de vídeo (GPU)
+Em placas NVIDIA compatíveis, consulta utilização, temperatura, memória de vídeo (VRAM), potência e versão do driver disponíveis. O painel mostra os principais valores; os demais ficam nos registros. A coleta usa a primeira GPU retornada pela ferramenta NVIDIA. Sensores de outras marcas não são coletados nesta versão. Uso alto de GPU durante um jogo pode ser normal.
+
+Disco e espaço disponível
+Atividade do disco é o maior percentual de ocupação entre os discos físicos acessíveis, acompanhado das taxas de leitura e gravação. Não é uma medida da saúde do SSD/HD. A tabela de volumes mostra espaço livre e capacidade, que são informações diferentes da atividade.
+
+Rede
+As setas indicam dados recebidos e enviados por segundo. B, KB, MB e GB representam quantidades de dados; /s significa por segundo. Os totais somam interfaces ativas e podem duplicar tráfego de VPN ou adaptadores virtuais. Não há teste de velocidade da internet, ping ou perda de pacotes.
+
+Maiores consumidores
+Agrupa processos com o mesmo nome e soma seus valores. O número entre parênteses indica quantas instâncias existem. A seleção reúne os oito maiores consumidores de RAM e os cinco de CPU, sem repetir nomes; a tabela é ordenada por RAM. CPU por processo é normalizada pela capacidade total da máquina. Processos protegidos podem ter leituras incompletas.
+
+Traço (—) ou valor ausente
+Significa que a leitura está indisponível, ainda está sendo preparada ou ficou antiga; não significa zero. A GPU possui horário próprio, e uma leitura com 30 segundos ou mais deixa de ser tratada como atual no painel.
+
+FREQUÊNCIA DE COLETA E GRÁFICO
+
+Quando os dados mudam
+Por padrão, os recursos gerais são amostrados a cada 2 segundos. Processos são renovados aproximadamente a cada 5 segundos, GPU a cada 10, eventos do Windows a cada 15 e espaço dos volumes a cada 30. Os trabalhos seguem o ritmo das amostras; esses intervalos podem aumentar se o computador estiver ocupado.
+
+Gráfico recente e histórico gravado
+O gráfico mantém até 180 amostras e tenta carregar leituras dos últimos 6 minutos ao abrir. Não representa todo o histórico em disco. Gravar a cada, em Preferências, define o intervalo de gravação das métricas, de 2 a 60 segundos; não transforma a coleta em uma captura por quadro do jogo.
+
+Pausar e retomar
+Pausar coleta interrompe novas amostras e novas consultas periódicas enquanto o programa permanece aberto. O botão muda para Retomar coleta. Os registros anteriores continuam disponíveis. Sono do Windows, pausa, fechamento do programa ou falhas podem deixar lacunas; lacuna não é uso zero.
+
+COMO OS ALERTAS AUTOMÁTICOS SÃO CALCULADOS
+
+Regras locais
+O monitor compara as amostras com limites fixos. São alertas por regras, não uma IA executando em segundo plano. Os limites abaixo são indícios gerais; não se ajustam automaticamente ao seu hardware ou ao jogo.
+
+CPU e RAM
+Gera um aviso quando CPU ou RAM fica em 90% ou mais durante pelo menos 20 segundos, conforme as amostras disponíveis.
+
+Atividade de disco
+Gera um aviso quando a atividade fica em 95% ou mais durante pelo menos 20 segundos.
+
+Temperatura da GPU
+Gera um aviso com leitura NVIDIA válida e recente em 85 °C ou mais por pelo menos 15 segundos. A adequação dessa temperatura depende do modelo e das condições de uso; o aviso não confirma superaquecimento ou dano.
+
+Pouco espaço
+Gera um aviso quando algum volume tem menos de 10% de espaço livre. Não exige os 20 segundos das regras anteriores.
+
+Repetição e falhas de coleta
+Os avisos de limite se repetem no máximo uma vez a cada 5 minutos por categoria. Quando a condição deixa de ocorrer, a contagem de duração é reiniciada. O programa também registra intervalos de amostragem maiores que o esperado, falhas ao coletar/gravar e uma execução anterior sem encerramento registrado. Esses registros não provam que o computador inteiro travou.
+
+EVENTOS, MARCADORES E ESTADOS DO MONITOR
+
+Eventos do Windows
+São mensagens produzidas pelo Windows e por aplicativos nos canais System e Application. O monitor coleta eventos críticos e erros, além de avisos de provedores relevantes para disco, memória, vídeo, energia e falhas de aplicativos. Não copia todos os canais nem todos os logs dos jogos. A leitura é feita em lotes e pode ter atraso.
+
+Eventos anteriores
+No primeiro acesso, busca uma janela de até 2 horas. Ao retomar com um cursor existente, pode recuperar eventos ainda não lidos de até 7 dias. O horário do evento pode ser anterior ao horário em que ele foi coletado.
+
+Marcador de travamento
+Marcar travamento grava um horário e sua observação. Informe jogo, sintoma, duração e horário aproximado, especialmente se o computador só respondeu depois. É um relato seu, não uma falha detectada automaticamente.
+
+Mensagens no painel
+Monitorando indica que a coleta está ativa; não certifica a saúde do hardware. Coleta pausada significa pausa manual. Leituras parciais indica falta de alguma leitura acompanhada pelo painel. Coleta atrasada indica ausência de atualização recente. Falha na coleta indica erro reportado pelo coletor ou pela gravação. Veja também o rodapé e os eventos para obter contexto.
+
+COMO A ANÁLISE PELA IA FUNCIONA
+
+Coletar e interpretar são etapas diferentes
+O aplicativo registra métricas, eventos e alertas locais. A interpretação pela IA acontece no chat quando você pede uma análise e a integração está disponível. O monitor não envia continuamente seus registros para uma IA e não executa uma análise de linguagem sozinho.
+
+O que deve ser comparado
+A análise começa verificando se o monitor está online, a idade dos dados e quais sensores estão disponíveis. Em seguida, compara a janela antes e depois do horário relatado: recursos, maiores consumidores, alertas, marcadores e eventos concretos do Windows.
+
+Como chegar a uma hipótese
+Picos sustentados, mudança no consumo e eventos no mesmo horário ajudam a formular hipóteses. Coincidência de horário não prova causa. Uma boa análise separa fatos confirmados, hipóteses e dados ausentes, e propõe verificações proporcionais ao que foi encontrado.
+
+Cobertura e incerteza
+O histórico consultado pode ser resumido e a leitura é limitada. A IA deve informar a janela realmente retornada, lacunas e sensores ausentes. Uma média baixa não descarta um pico curto ou a saturação de um núcleo. Se houver só registros antigos, eles não devem ser apresentados como o estado atual do PC.
+
+PASSO A PASSO QUANDO UM JOGO TRAVA
+
+1 · Deixe o monitor aberto
+Mantenha a coleta ativa antes de iniciar o jogo. A bandeja permite acompanhar sem deixar a janela sobre o jogo.
+
+2 · Registre o contexto
+Quando o computador responder, clique em Marcar travamento e descreva o que ocorreu: jogo congelou, tela preta, áudio continuou, computador reiniciou ou somente o jogo fechou. Inclua o horário aproximado e quanto tempo durou. O horário do marcador será o da gravação; descreva o horário anterior se necessário.
+
+3 · Peça uma comparação no chat
+Exemplo: Use $pc-monitor para analisar os 15 minutos ao redor do travamento do LoL às 21h30. Compare métricas, marcadores e eventos, separando fatos de hipóteses. Informe o dia se o episódio não foi hoje.
+
+4 · Exporte se precisar
+Use Exportar diagnóstico para salvar um pacote local e compartilhar manualmente. Se o monitor não estava ativo ou a coleta parou, parte do episódio pode não ter métricas; alguns eventos do Windows ainda podem estar disponíveis depois.
+
+CONEXÃO COM IA: MCP E SKILL
+
+O que é a conexão
+O servidor MCP é a ponte local entre o chat e o monitor. A skill pc-monitor orienta como consultar e interpretar os dados. A página Conexão com IA mostra se o canal local está pronto e a última consulta recebida; isso, sozinho, não confirma que este chat já carregou a integração.
+
+O que o chat pode consultar
+Há consultas de status, métricas atuais, histórico, eventos, incidentes/marcadores e informações básicas do sistema. Quando você pedir, também pode registrar um marcador. Exemplos: Como está o computador agora? ou Use $pc-monitor para analisar os últimos 15 minutos.
+
+Monitor fechado ou dados antigos
+Consultas de leitura podem usar registros existentes e informar que a fonte é histórica. Registrar um marcador exige o monitor ativo. Se a integração acabou de ser instalada e ainda não aparecer no chat, pode ser necessário reabrir o Codex.
+
+Alcance das ferramentas
+A comunicação local é restrita à sua conta. As ferramentas do monitor não oferecem instalação de drivers, desinstalação de programas, reinício do computador nem execução de comandos arbitrários. O monitor não faz um inventário completo de drivers.
+
+PREFERÊNCIAS, TEMAS E ATALHOS
+
+Aparência
+Escolha Claro ou Escuro em Preferências > Aparência, ou use o botão no topo. A alteração é aplicada e salva imediatamente, inclusive para a próxima inicialização.
+
+Iniciar com o Windows
+O interruptor salva a alteração imediatamente para sua conta. Ao entrar no Windows, o programa aguarda 30 segundos e inicia somente na bandeja, sem mostrar o painel. Ele não se instala como um serviço administrativo nem eleva as permissões automaticamente.
+
+Coleta e retenção
+Ajuste o intervalo de gravação, os dias de retenção, o limite de espaço e a coleta de processos, eventos e GPU NVIDIA. Para aplicar essas opções, clique em Salvar preferências. Desativar uma fonte limita o que pode ser analisado depois.
+
+Ajuda
+Abra pelo botão Ajuda no topo, pela navegação lateral, pelo menu da bandeja ou pela tecla F1 quando o painel estiver em foco. Clique no título de um tópico para abrir/fechar seu conteúdo. Expandir tudo e Recolher tudo facilitam a leitura. A Ajuda funciona sem internet.
+
+REGISTROS, RETENÇÃO E EXPORTAÇÃO
+
+Onde ficam os dados
+A pasta padrão é %LOCALAPPDATA%\PCMonitor. Em Preferências, Abrir pasta de dados mostra a pasta usada por esta execução. Os arquivos diários guardam métricas, incidentes e eventos; há também informações básicas do sistema, preferências e controles de sessão/leitura.
+
+Quanto tempo são mantidos
+O padrão é manter logs por até 7 dias ou 200 MB, o primeiro limite atingido. É possível escolher de 1 a 30 dias e de 25 a 1000 MB. A limpeza remove logs antigos; o limite é aplicado à pasta de logs, não a toda a pasta do aplicativo. Pacotes ZIP já exportados não são apagados por essa rotina.
+
+Horários e formato
+O painel apresenta horários locais. Os registros usam horário UTC e um identificador de sessão para relacionar as leituras. Arquivos JSONL contêm um registro por linha, permitindo consultar o histórico sem depender da janela aberta.
+
+O que vai no pacote
+Exportar diagnóstico cria um ZIP na pasta que você escolher, com guia de análise, manifesto, informações básicas do sistema, métricas atuais disponíveis e logs existentes. Ele não envia o arquivo automaticamente. Revise as mensagens antes de compartilhar, pois podem conter dados pessoais.
+
+PRIVACIDADE, LIMITAÇÕES E CUIDADOS NA INTERPRETAÇÃO
+
+O que é registrado
+São coletados números de utilização, nomes e contagem de processos selecionados, eventos relevantes e observações que você digitar. Não há captura de tela, teclas, conteúdo de abas ou argumentos dos processos. Dados como IP ou MAC não são coletados deliberadamente, mas mensagens de terceiros podem conter informações pessoais.
+
+Ocultação parcial
+O programa tenta ocultar caminhos de perfil e alguns padrões de segredos. Isso não garante a remoção de todos os dados pessoais. Os dados ficam locais até uma consulta solicitada pelo chat ou uma exportação compartilhada por você; o conteúdo consultado pode passar a fazer parte da conversa.
+
+O que esta versão não mede
+Não mede temperatura da CPU, saúde SMART dos discos, FPS por quadro, integridade física da RAM ou todos os drivers instalados. Não analisa minidumps e não captura automaticamente todos os arquivos de log dos jogos. Também não executa teste físico ou teste de estresse.
+
+Permissões e sensores
+Alguns processos ou canais de eventos podem estar inacessíveis à conta atual. A ausência de um sensor ou uma falha de leitura não demonstra defeito da peça. Uma execução encerrada sem registro pode ser término forçado, reinício, falta de energia ou falha do próprio monitor.
+
+Antes de concluir uma causa
+Avisos de recurso, eventos e relatos precisam ser comparados no mesmo horário. Um erro antigo não explica necessariamente um travamento recente. O monitor ajuda a reunir evidências; quando os dados não bastam, a conclusão correta deve indicar essa limitação.

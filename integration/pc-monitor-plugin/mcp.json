@@ -1,0 +1,1 @@
+{"$schema":"https://agent-plugins.org/schemas/1.0.0/mcp.schema.json","mcpServers":{"pc_monitor":{"type":"stdio","command":"${PLUGIN_ROOT}/server/PCMonitor.Mcp.exe","args":[],"cwd":"${PLUGIN_ROOT}/server"}}}

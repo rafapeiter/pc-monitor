@@ -1,0 +1,12 @@
+PC MONITOR 2.0.2 — 24/10/2026
+
+Correção da inicialização com Windows
+• Aguarda 30 segundos antes de iniciar os coletores no login.
+• Executa o ciclo da aplicação sem mostrar a janela principal.
+• A janela só é exibida quando o usuário abre o painel.
+• Inicializações duplicadas com --tray saem sem abrir o painel existente.
+• A configuração de início automático aponta para a instalação atualizada.
+• Erros de abertura em modo tray ficam no registro local, sem caixa de diálogo.
+
+Temas claro/escuro, Ajuda/F1, coleta, registros e integração MCP preservados.
+Os testes usam uma pasta de dados própria e não reiniciam o Windows.

@@ -1,0 +1,1 @@
+{"$schema":"https://agent-plugins.org/schemas/1.0.0/plugin.schema.json","name":"pc-monitor-plugin","version":"2.0.2","description":"Integração local com o PC Monitor para consultar métricas e investigar falhas do Windows.","extensions":{"com.openai":{"interface":{"displayName":"PC Monitor","shortDescription":"Diagnóstico local do Windows","capabilities":[]}}}}
