@@ -1,8 +1,18 @@
 # PC Monitor
 
-Monitor local de desempenho e eventos do Windows, com interface em português e servidor MCP para consultar os dados em um assistente compatível.
+Monitor local de desempenho e eventos do Windows, com interface em português e **integração MCP incluída** (Model Context Protocol). O servidor MCP permite que assistentes compatíveis consultem as métricas, o histórico e os eventos deste computador e registrem marcadores quando solicitado.
 
 Versão do código: **2.0.2**.
+
+## Baixar e executar
+
+**[Baixar PC Monitor 2.0.2 para Windows x64](https://github.com/rafapeiter/pc-monitor/releases/download/v2.0.2/PCMonitor-v2.0.2-win-x64.zip)**
+
+1. Baixe o arquivo ZIP na [página da release](https://github.com/rafapeiter/pc-monitor/releases/tag/v2.0.2).
+2. Extraia todo o conteúdo para uma pasta no computador.
+3. Abra `PCMonitor.exe` dentro da pasta extraída.
+
+O pacote já contém o executável, as bibliotecas necessárias, o servidor `PCMonitor.Mcp.exe` e a integração MCP com skill. Não é preciso compilar para usar. Mantenha os arquivos e as subpastas juntos; a configuração do cliente MCP é explicada na seção **Integração MCP** abaixo.
 
 ## Recursos
 
